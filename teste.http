@@ -1,0 +1,35 @@
+### 1) Listar alunos
+GET http://localhost:3000/alunos
+
+### 2) Cadastrar aluno (201)
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+  "nome": "Pedro",
+  "email": "pedro@gmail.com"
+}
+
+### 3) Atualizar aluno 1 (200)
+PUT http://localhost:3000/alunos/1
+Content-Type: application/json
+
+{
+  "nome": "Carlos Silva",
+  "email": "carlossilva@gmail.com"
+}
+
+### 4) Excluir aluno 2 (200)
+DELETE http://localhost:3000/alunos/2
+
+### 5) Conferir alterações
+GET http://localhost:3000/alunos
+
+### 6) Cadastro com campos vazios (400)
+POST http://localhost:3000/alunos
+Content-Type: application/json
+
+{
+  "nome": "",
+  "email": ""
+}
